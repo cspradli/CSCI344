@@ -1,13 +1,13 @@
-const classNames = {
-    todoItem: 'todo-container',
-    todoCheck: 'todo-checkbox',
-    todoText: 'todo-text',
-    todoTextChecked: 'todo-text-checked',
+const styleNames = {
+    todoItem: 'todoContainer',
+    todoCheck: 'todoCheckbox',
+    todoText: 'todoText',
+    todoTextChecked: 'todoTextChecked',
   }
   
-const list = document.getElementById('todo-list')
-const itemCountDiv = document.getElementById('item-count')
-const uncheckedCountDiv = document.getElementById('unchecked-count')
+const list = document.getElementById('todoList')
+const itemCountDiv = document.getElementById('itemCount')
+const uncheckedCountDiv = document.getElementById('uncheckedCount')
   
 let todos = []
 
@@ -27,7 +27,9 @@ function Todo(name) {
   this.checked = false
   this.checkbox = null
 }
-  
+function crossOff(input){
+  input.span.style.textDecoration = "line-through"
+}
 Todo.prototype.check = function() {
   this.checked = !this.checked
   if (this.element && this.checkbox) {
@@ -41,19 +43,20 @@ function makeTodo(todo) {
   if (todo.element) return todo.element
   
   const checkbox = document.createElement('input')
-  checkbox.className = classNames.todoCheck
+  checkbox.className = styleNames.todoCheck
   checkbox.type = 'checkbox'
   checkbox.checked = todo.checked
 
   checkbox.todoRef = todo
   checkbox.onchange = check
-  
+
   const span = document.createElement('span')
-  span.className = classNames.todoText
+  span.className = styleNames.todoText
   span.innerHTML = todo.name
   
+
   const li = document.createElement('li')
-  li.className = classNames.todoItem
+  li.className = styleNames.todoItem
   li.appendChild(checkbox)
   li.appendChild(span)
   
@@ -93,6 +96,7 @@ function check() {
   this.todoRef.check()
   return make()
 }  
+
 
 function formValidate(name){
   if (name === ''){

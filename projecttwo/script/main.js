@@ -27,7 +27,7 @@ function Todo(name) {
   this.checked = false
   this.checkbox = null
 }
-  
+
 Todo.prototype.check = function() {
   this.checked = !this.checked
   if (this.element && this.checkbox) {
@@ -47,11 +47,12 @@ function makeTodo(todo) {
 
   checkbox.todoRef = todo
   checkbox.onchange = check
-  
+
   const span = document.createElement('span')
   span.className = styleNames.todoText
   span.innerHTML = todo.name
   
+
   const li = document.createElement('li')
   li.className = styleNames.todoItem
   li.appendChild(checkbox)
@@ -93,7 +94,6 @@ function check() {
   this.todoRef.check()
   return make()
 }  
-
 
 function formValidate(name){
   if (name === ''){
