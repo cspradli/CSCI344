@@ -64,32 +64,32 @@ ul {
     flex: none;
 }
   
-.todo-list {
+.todoList {
     flex: 1 1 0;
     margin-top: 20px;
     padding: 20px;
     overflow-y: auto;
 }
 
-.todo-text{
+.todoText{
     font-size: 1.0em;
 }
 
-.todo-text-checked{
+.todoTextChecked{
     font-size: 1.0em;
     text-decoration: line-through;
 }
 
-.todo-checkbox {
+.todoCheckbox {
     margin: 10px;
 }
   
-.todo-container {
+.todoContainer {
     padding: 20px;
     border-bottom: 1px solid #333;
 }
   
-.todo-container:first-of-type {
+.todoContainer:first-of-type {
     border-top: 1px solid #333;
 }
   

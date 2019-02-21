@@ -1,13 +1,13 @@
 const styleNames = {
-    todoItem: 'todo-container',
-    todoCheck: 'todo-checkbox',
-    todoText: 'todo-text',
-    todoTextChecked: 'todo-text-checked',
+    todoItem: 'todoContainer',
+    todoCheck: 'todoCheckbox',
+    todoText: 'todoText',
+    todoTextChecked: 'todoTextChecked',
   }
   
-const list = document.getElementById('todo-list')
-const itemCountDiv = document.getElementById('item-count')
-const uncheckedCountDiv = document.getElementById('unchecked-count')
+const list = document.getElementById('todoList')
+const itemCountDiv = document.getElementById('itemCount')
+const uncheckedCountDiv = document.getElementById('uncheckedCount')
   
 let todos = []
 
