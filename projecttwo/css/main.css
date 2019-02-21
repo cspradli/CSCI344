@@ -2,55 +2,55 @@
     box-sizing: border-box;
   }
   
-  html, body {
+html, body {
     background-color: #fff;
     margin: 0;
     padding: 0;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Roboto Mono', monospace;
   }
 
-  #inputItems {
+#inputItems {
     display: flex;
     margin-top: 5%;
     margin-left: 2%;
     margin-right: 2%;
-  }
+}
 
-  #inputTodo{
+#inputTodo{
     width: 50%;
     padding: 10px;
     float: left;
     font-size: 1.0em;
-  }
+}
 
-  .addBtn{
+.addBtn{
     padding: 10px;
     background: #d9d9d9;
     cursor: pointer;
     transition: 0.3s;
     margin-left: 2%;
-  }
+}
 
-  .addBtn:hover {
+.addBtn:hover {
     background: #9b9b9b;
-  }
+}
 
-  ul {
+ul {
     margin: 0;
     padding: 0;
     list-style-type: none;
-  }
+}
   
-  .center {
+.center {
     align-self: center;
-  }
+}
   
-  .flow-right {
+.flow-right {
     display: flex;
     justify-content: space-around;
-  }
+}
   
-  .container {
+.container {
     max-width: 800px;
     margin: 0 auto;
     padding: 10px;
@@ -58,38 +58,38 @@
     flex-direction: column;
     background-color: #fff;
     height: 100vh;
-  }
+}
   
-  .title, .controls{
+.head, .controls{
     flex: none;
-  }
+}
   
-  .todo-list {
+.todo-list {
     flex: 1 1 0;
     margin-top: 20px;
     padding: 20px;
     overflow-y: auto;
-  }
+}
 
-  .todo-text{
+.todo-text{
     font-size: 1.0em;
-  }
+}
 
-  .todo-text-checked{
+.todo-text-checked{
     font-size: 1.0em;
     text-decoration: line-through;
-  }
+}
 
-  .todo-checkbox {
+.todo-checkbox {
     margin: 10px;
-  }
+}
   
-  .todo-container {
+.todo-container {
     padding: 20px;
     border-bottom: 1px solid #333;
-  }
+}
   
-  .todo-container:first-of-type {
+.todo-container:first-of-type {
     border-top: 1px solid #333;
-  }
+}
   
