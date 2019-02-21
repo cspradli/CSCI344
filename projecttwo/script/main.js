@@ -1,4 +1,4 @@
-const classNames = {
+const styleNames = {
     todoItem: 'todo-container',
     todoCheck: 'todo-checkbox',
     todoText: 'todo-text',
@@ -41,7 +41,7 @@ function makeTodo(todo) {
   if (todo.element) return todo.element
   
   const checkbox = document.createElement('input')
-  checkbox.className = classNames.todoCheck
+  checkbox.className = styleNames.todoCheck
   checkbox.type = 'checkbox'
   checkbox.checked = todo.checked
 
@@ -49,11 +49,11 @@ function makeTodo(todo) {
   checkbox.onchange = check
   
   const span = document.createElement('span')
-  span.className = classNames.todoText
+  span.className = styleNames.todoText
   span.innerHTML = todo.name
   
   const li = document.createElement('li')
-  li.className = classNames.todoItem
+  li.className = styleNames.todoItem
   li.appendChild(checkbox)
   li.appendChild(span)
   
