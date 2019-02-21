@@ -94,6 +94,7 @@ function check() {
   return make()
 }  
 
+
 function formValidate(name){
   if (name === ''){
     alert("Must have input to add to-do!")
