@@ -72,14 +72,28 @@ const classNames = {
   
   function addTodo() {
     var name = document.getElementById("inputTodo").value
-    const todo = new Todo(name)
-    //clears input box
-    document.getElementById("inputTodo").value = ''
-    todos.push(todo)
-    return make()
+    if (formValidate(name)){
+      console.log("New todo made")
+      const todo = new Todo(name)
+      //clears input box
+      document.getElementById("inputTodo").value = ''
+      todos.push(todo)
+      console.log("Number of items: " + todos.length)
+      return make()
+    } else { 
+      return false
+    }
   }
   
   function check() {
     this.todoRef.check()
     return make()
   }  
+
+  function formValidate(name){
+    if (name === ''){
+      alert("Must have input to add to-do!")
+      return false
+    }
+    return true
+  }
